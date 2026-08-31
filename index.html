@@ -16,47 +16,45 @@
       <span class="logo-text">musicSB</span>
     </div>
     <nav class="nav">
-      <span class="nav-item">🎵 Início</span>
-      <span class="nav-item">🎶 Explorar</span>
-      <span class="nav-item">💖 Favoritos</span>
-      <span class="nav-item">👤 Perfil</span>
+      <span class="nav-item" onclick="filtrar('todos')">🎵 Início</span>
+      <span class="nav-item" onclick="filtrar('sertanejo')">🎶 Sertanejo</span>
+      <span class="nav-item" onclick="filtrar('funk')">💃 Funk</span>
+      <span class="nav-item" onclick="filtrar('pop')">🎤 Pop</span>
     </nav>
   </header>
 
-  <!-- BARRA DE PESQUISA ESTILO REDE SOCIAL -->
+  <!-- BARRA DE PESQUISA FUNCIONAL -->
   <div class="search-bar">
     <span class="search-icon">🔍</span>
-    <input type="text" placeholder="Pesquisar músicas, artistas..." class="search-input">
+    <input type="text" id="pesquisa" placeholder="Pesquisar músicas, artistas..." class="search-input" onkeyup="buscarMusica()">
   </div>
 
   <!-- HISTÓRIAS ESTILO INSTAGRAM -->
   <div class="stories">
-    <div class="story">
+    <div class="story" onclick="filtrar('todos')">
+      <div class="story-circle">🌟</div>
+      <span class="story-name">Todos</span>
+    </div>
+    <div class="story" onclick="filtrar('sertanejo')">
       <div class="story-circle">🎵</div>
       <span class="story-name">Sertanejo</span>
     </div>
-    <div class="story">
+    <div class="story" onclick="filtrar('funk')">
       <div class="story-circle">🎶</div>
       <span class="story-name">Funk</span>
     </div>
-    <div class="story">
+    <div class="story" onclick="filtrar('pop')">
       <div class="story-circle">🎤</div>
       <span class="story-name">Pop</span>
     </div>
-    <div class="story">
-      <div class="story-circle">🌟</div>
-      <span class="story-name">Novidades</span>
-    </div>
-    <div class="story">
+    <div class="story" onclick="filtrar('todos')">
       <div class="story-circle">💖</div>
       <span class="story-name">Favoritos</span>
     </div>
   </div>
 
-  <!-- CATEGORIAS ESTILO CARDS DE REDE SOCIAL -->
-  
-  <!-- SERTANEJO -->
-  <div class="post">
+  <!-- ===== SERTANEJO (MAIS MÚSICAS!) ===== -->
+  <div class="post" data-categoria="sertanejo">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎵</span>
@@ -65,14 +63,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/tPmS-CfIeNk"
         title="Luan Santana - TE ESPERANDO (Registro Histórico)" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 2.5k</span>
       <span class="action">💬 234</span>
@@ -80,7 +76,7 @@
     </div>
   </div>
 
-  <div class="post">
+  <div class="post" data-categoria="sertanejo">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎵</span>
@@ -89,14 +85,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/Dt13Wv6Opeo"
         title="Marília Mendonça - Foi Por Conveniência (Não Foi Por Amor) (Vídeo Oficial)" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 3.1k</span>
       <span class="action">💬 567</span>
@@ -104,7 +98,7 @@
     </div>
   </div>
 
-  <div class="post">
+  <div class="post" data-categoria="sertanejo">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎵</span>
@@ -113,14 +107,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/xfwXJxf839w"
         title="Luan Santana - CHUVA DE ARROZ (Registro Histórico)" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 1.8k</span>
       <span class="action">💬 189</span>
@@ -128,8 +120,54 @@
     </div>
   </div>
 
-  <!-- FUNK -->
-  <div class="post">
+  <!-- NOVA MÚSICA SERTANEJA! -->
+  <div class="post" data-categoria="sertanejo">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎵</span>
+        <span class="username">Sertanejo</span>
+        <span class="post-time">• 8h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/VFFj5kPv_MA"
+        title="Henrique & Juliano - A MAIOR SAUDADE (Vídeo Oficial)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 4.3k</span>
+      <span class="action">💬 789</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <!-- OUTRA NOVA MÚSICA SERTANEJA! -->
+  <div class="post" data-categoria="sertanejo">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎵</span>
+        <span class="username">Sertanejo</span>
+        <span class="post-time">• 10h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/plqH1rqNj8M"
+        title="Jorge & Mateus - PÉ NA ESTRADA (Vídeo Oficial)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 5.1k</span>
+      <span class="action">💬 1.0k</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <!-- ===== FUNK ===== -->
+  <div class="post" data-categoria="funk">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎶</span>
@@ -138,7 +176,6 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/Leo8vA1TKwo"
         title="CUIDA DO PET - MC Negão Original, Aaron Modesto, Willian, Iguinho CT, Du'l (Oldilla, Alladin)"
@@ -146,7 +183,6 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 4.2k</span>
       <span class="action">💬 892</span>
@@ -154,7 +190,7 @@
     </div>
   </div>
 
-  <div class="post">
+  <div class="post" data-categoria="funk">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎶</span>
@@ -163,14 +199,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/n5F4s8hEMQk"
         title='"GRWM" Mc Iguinho CT, Mc Willian, Mc Vitin, DJ Alladin, DJ Gu' frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 3.7k</span>
       <span class="action">💬 654</span>
@@ -178,7 +212,7 @@
     </div>
   </div>
 
-  <div class="post">
+  <div class="post" data-categoria="funk">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎶</span>
@@ -187,14 +221,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/gv_zam5wWKs"
         title="Mc Ig, Mc Lele jp - Mente Barulhenta (Dj Oreia, Dj Noiskita) [OFFICIAL VIDEO]" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 5.4k</span>
       <span class="action">💬 1.2k</span>
@@ -202,8 +234,8 @@
     </div>
   </div>
 
-  <!-- POP -->
-  <div class="post">
+  <!-- ===== POP (MAIS MÚSICAS!) ===== -->
+  <div class="post" data-categoria="pop">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎤</span>
@@ -212,14 +244,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/eVli-tstM5E"
         title="Sabrina Carpenter - Espresso" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 6.7k</span>
       <span class="action">💬 1.5k</span>
@@ -227,7 +257,7 @@
     </div>
   </div>
 
-  <div class="post">
+  <div class="post" data-categoria="pop">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎤</span>
@@ -236,14 +266,12 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/uxjhN_Donfw"
         title="Gracie Abrams - I Love You, I'm Sorry (Official Music Video)" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 4.9k</span>
       <span class="action">💬 876</span>
@@ -251,7 +279,7 @@
     </div>
   </div>
 
-  <div class="post">
+  <div class="post" data-categoria="pop">
     <div class="post-header">
       <div class="post-user">
         <span class="user-avatar">🎤</span>
@@ -260,19 +288,90 @@
       </div>
       <span class="post-options">⋯</span>
     </div>
-    
     <div class="post-content">
       <iframe width="100%" height="450" src="https://www.youtube.com/embed/Z5ckB4t4zVQ"
         title="Constellations" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <div class="post-actions">
       <span class="action">❤️ 8.2k</span>
       <span class="action">💬 2.1k</span>
       <span class="action">↗️ Compartilhar</span>
     </div>
+  </div>
+
+  <!-- NOVA MÚSICA POP! -->
+  <div class="post" data-categoria="pop">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎤</span>
+        <span class="username">Pop</span>
+        <span class="post-time">• 6h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/f1J2NqoxLJo"
+        title="Olivia Rodrigo - drivers license (Official Video)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 7.5k</span>
+      <span class="action">💬 1.8k</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <!-- OUTRA NOVA MÚSICA POP! -->
+  <div class="post" data-categoria="pop">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎤</span>
+        <span class="username">Pop</span>
+        <span class="post-time">• 8h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/g6ng8iy-l0U"
+        title="Billie Eilish - bad guy (Official Music Video)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 9.1k</span>
+      <span class="action">💬 2.4k</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <!-- MAIS UMA MÚSICA POP! -->
+  <div class="post" data-categoria="pop">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎤</span>
+        <span class="username">Pop</span>
+        <span class="post-time">• 10h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/XZ5TajZYW6w"
+        title="Dua Lipa - Levitating (Official Music Video)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 6.3k</span>
+      <span class="action">💬 1.4k</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <div style="text-align: center; padding: 20px; color: #a0708a; font-size: 14px;">
+    🌸 Feito com 💖 por Sofia • musicSB
   </div>
 
 </body>
