@@ -20,19 +20,20 @@
       <span class="nav-item" onclick="filtrar('sertanejo')">🎶 Sertanejo</span>
       <span class="nav-item" onclick="filtrar('funk')">💃 Funk</span>
       <span class="nav-item" onclick="filtrar('pop')">🎤 Pop</span>
+      <span class="nav-item" onclick="filtrar('rap')">🎧 Rap</span>
     </nav>
   </header>
 
-  <!-- BARRA DE PESQUISA FUNCIONAL -->
+  <!-- BARRA DE PESQUISA -->
   <div class="search-bar">
     <span class="search-icon">🔍</span>
     <input type="text" id="pesquisa" placeholder="Pesquisar músicas, artistas..." class="search-input" onkeyup="buscarMusica()">
   </div>
 
-  <!-- MENSAGEM DE NENHUM RESULTADO -->
+  <!-- MENSAGEM SEM RESULTADO -->
   <div class="sem-resultado" id="sem-resultado"></div>
 
-  <!-- HISTÓRIAS ESTILO INSTAGRAM -->
+  <!-- HISTÓRIAS -->
   <div class="stories">
     <div class="story" onclick="filtrar('todos')">
       <div class="story-circle">🌟</div>
@@ -50,9 +51,21 @@
       <div class="story-circle">🎤</div>
       <span class="story-name">Pop</span>
     </div>
+    <div class="story" onclick="filtrar('rap')">
+      <div class="story-circle">🎧</div>
+      <span class="story-name">Rap</span>
+    </div>
   </div>
 
-  <!-- ===== SERTANEJO ===== -->
+  <!-- ========================================== -->
+  <!-- ===== CATEGORIA: SERTANEJO ===== -->
+  <!-- ========================================== -->
+
+  <div class="categoria-titulo">
+    <span class="categoria-emoji">🎵</span>
+    <h2 class="categoria-nome">Sertanejo</h2>
+  </div>
+
   <div class="post" data-categoria="sertanejo" data-titulo="Luan Santana - Te Esperando">
     <div class="post-header">
       <div class="post-user">
@@ -119,7 +132,6 @@
     </div>
   </div>
 
-  <!-- NOVA SERTANEJA -->
   <div class="post" data-categoria="sertanejo" data-titulo="Henrique e Juliano - A Maior Saudade">
     <div class="post-header">
       <div class="post-user">
@@ -142,7 +154,6 @@
     </div>
   </div>
 
-  <!-- OUTRA SERTANEJA -->
   <div class="post" data-categoria="sertanejo" data-titulo="Jorge e Mateus - Pé na Estrada">
     <div class="post-header">
       <div class="post-user">
@@ -165,7 +176,15 @@
     </div>
   </div>
 
-  <!-- ===== FUNK ===== -->
+  <!-- ========================================== -->
+  <!-- ===== CATEGORIA: FUNK ===== -->
+  <!-- ========================================== -->
+
+  <div class="categoria-titulo">
+    <span class="categoria-emoji">🎶</span>
+    <h2 class="categoria-nome">Funk</h2>
+  </div>
+
   <div class="post" data-categoria="funk" data-titulo="MC Negão Original - Cuida do Pet">
     <div class="post-header">
       <div class="post-user">
@@ -232,7 +251,6 @@
     </div>
   </div>
 
-  <!-- NOVO FUNK -->
   <div class="post" data-categoria="funk" data-titulo="MC Kevinho - O Grave Bater">
     <div class="post-header">
       <div class="post-user">
@@ -255,7 +273,15 @@
     </div>
   </div>
 
-  <!-- ===== POP ===== -->
+  <!-- ========================================== -->
+  <!-- ===== CATEGORIA: POP ===== -->
+  <!-- ========================================== -->
+
+  <div class="categoria-titulo">
+    <span class="categoria-emoji">🎤</span>
+    <h2 class="categoria-nome">Pop</h2>
+  </div>
+
   <div class="post" data-categoria="pop" data-titulo="Sabrina Carpenter - Espresso">
     <div class="post-header">
       <div class="post-user">
@@ -322,7 +348,6 @@
     </div>
   </div>
 
-  <!-- NOVA POP -->
   <div class="post" data-categoria="pop" data-titulo="Olivia Rodrigo - drivers license">
     <div class="post-header">
       <div class="post-user">
@@ -345,7 +370,6 @@
     </div>
   </div>
 
-  <!-- OUTRA POP -->
   <div class="post" data-categoria="pop" data-titulo="Dua Lipa - Levitating">
     <div class="post-header">
       <div class="post-user">
@@ -368,7 +392,6 @@
     </div>
   </div>
 
-  <!-- MAIS POP -->
   <div class="post" data-categoria="pop" data-titulo="The Weeknd - Blinding Lights">
     <div class="post-header">
       <div class="post-user">
@@ -391,11 +414,109 @@
     </div>
   </div>
 
+  <!-- ========================================== -->
+  <!-- ===== CATEGORIA: RAP (NOVA!) ===== -->
+  <!-- ========================================== -->
+
+  <div class="categoria-titulo">
+    <span class="categoria-emoji">🎧</span>
+    <h2 class="categoria-nome">Rap</h2>
+  </div>
+
+  <div class="post" data-categoria="rap" data-titulo="Djonga - O Mundo é Nosso">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎧</span>
+        <span class="username">Rap</span>
+        <span class="post-time">• 1h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/3bNITQR4Uso"
+        title="Djonga - O Mundo é Nosso" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 3.8k</span>
+      <span class="action">💬 723</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <div class="post" data-categoria="rap" data-titulo="Filipe Ret - Vivendo no Erro">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎧</span>
+        <span class="username">Rap</span>
+        <span class="post-time">• 3h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/cn_ccxshcWU"
+        title="Filipe Ret - Vivendo no Erro" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 4.5k</span>
+      <span class="action">💬 891</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <div class="post" data-categoria="rap" data-titulo="Matuê - Máquina do Tempo">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎧</span>
+        <span class="username">Rap</span>
+        <span class="post-time">• 5h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/giD9DqO0LGU"
+        title="Matuê - Máquina do Tempo" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 5.2k</span>
+      <span class="action">💬 1.1k</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <div class="post" data-categoria="rap" data-titulo="BK - Números">
+    <div class="post-header">
+      <div class="post-user">
+        <span class="user-avatar">🎧</span>
+        <span class="username">Rap</span>
+        <span class="post-time">• 7h atrás</span>
+      </div>
+      <span class="post-options">⋯</span>
+    </div>
+    <div class="post-content">
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/7ZxN8v0_k_M"
+        title="BK - Números" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+      <span class="action">❤️ 3.2k</span>
+      <span class="action">💬 456</span>
+      <span class="action">↗️ Compartilhar</span>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
   <div style="text-align: center; padding: 20px; color: #a0708a; font-size: 14px;">
     🌸 Feito com 💖 por Sofia • musicSB
   </div>
 
-  <!-- ===== JAVASCRIPT DA PESQUISA ===== -->
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
     function buscarMusica() {
       var input = document.getElementById('pesquisa');
