@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
 }
 
-/* ===== CABEÇALHO ESTILO REDE SOCIAL ===== */
+/* ===== CABEÇALHO ===== */
 .header {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
@@ -109,7 +109,22 @@ body {
     color: #a0708a;
 }
 
-/* ===== HISTÓRIAS ESTILO INSTAGRAM ===== */
+/* ===== MENSAGEM SEM RESULTADO ===== */
+.sem-resultado {
+    text-align: center;
+    padding: 30px;
+    color: #a0708a;
+    font-size: 18px;
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sem-resultado.ativo {
+    display: block;
+}
+
+/* ===== HISTÓRIAS ===== */
 .stories {
     max-width: 900px;
     margin: 20px auto;
@@ -164,7 +179,7 @@ body {
     font-weight: 500;
 }
 
-/* ===== POSTS (CARDS) ESTILO REDE SOCIAL ===== */
+/* ===== POSTS ===== */
 .post {
     max-width: 700px;
     margin: 25px auto;
@@ -266,19 +281,6 @@ body {
 .action:hover {
     background: rgba(255, 107, 138, 0.1);
     color: #ff6b8a;
-}
-
-/* ===== MENSAGEM QUANDO NÃO ACHA NADA ===== */
-.sem-resultado {
-    text-align: center;
-    padding: 40px;
-    color: #a0708a;
-    font-size: 18px;
-    display: none;
-}
-
-.sem-resultado.ativo {
-    display: block;
 }
 
 /* ===== RESPONSIVIDADE ===== */
