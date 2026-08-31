@@ -1,120 +1,358 @@
-body {
-    background: linear-gradient(135deg, #ffe6f0, #ffb3c6, #ff8fab);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+b* {
     margin: 0;
-    padding: 20px;
-    color: #5c2e4a;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f0ff, #ffe6f0, #ffd6e8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d1b2e;
+    padding: 0;
     min-height: 100vh;
 }
 
-h1 {
+/* ===== CABEÇALHO ESTILO REDE SOCIAL ===== */
+.header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 182, 193, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(255, 107, 138, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: bold;
     color: #5c2e4a;
-    font-size: 70px;
-    text-align: center;
-    text-shadow: 3px 3px 6px rgba(255, 182, 193, 0.5);
-    margin-bottom: 10px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 20px;
-    border-radius: 50px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    display: inline-block;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-h2 {
+.logo-icon {
+    font-size: 32px;
+}
+
+.logo-text {
+    background: linear-gradient(135deg, #ff6b8a, #ff8fab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Georgia', serif;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    font-size: 16px;
+    font-weight: 500;
     color: #5c2e4a;
-    font-size: 30px;
-    margin-top: 40px;
-    padding-left: 20px;
-    border-left: 5px solid #ff6b8a;
-    font-family: 'Georgia', serif;
-}
-
-iframe {
-    display: block;
-    margin: 20px auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(255, 107, 138, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-}
-
-iframe:hover {
-    transform: scale(1.03) rotate(-1deg);
-    box-shadow: 0 12px 40px rgba(255, 107, 138, 0.5);
-}
-
-.categoria {
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 30px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 900px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 8px 32px rgba(255, 107, 138, 0.2);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 12px;
     transition: all 0.3s ease;
 }
 
-.categoria:hover {
-    background: rgba(255, 255, 255, 0.6);
+.nav-item:hover {
+    background: rgba(255, 107, 138, 0.15);
+    transform: scale(1.05);
+}
+
+/* ===== BARRA DE PESQUISA ===== */
+.search-bar {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid rgba(255, 182, 193, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 138, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-bar:hover {
     border-color: #ff6b8a;
-    box-shadow: 0 12px 40px rgba(255, 107, 138, 0.3);
-    transform: scale(1.01);
+    box-shadow: 0 4px 25px rgba(255, 107, 138, 0.2);
 }
 
-.categoria h2 {
-    margin-top: 5px;
-    text-align: center;
-    border-left: none;
-    border-bottom: 3px solid #ff6b8a;
-    padding-bottom: 15px;
-    font-size: 35px;
-    letter-spacing: 3px;
+.search-icon {
+    font-size: 20px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    color: #2d1b2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-input::placeholder {
+    color: #a0708a;
+}
+
+/* ===== HISTÓRIAS ESTILO INSTAGRAM ===== */
+.stories {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    padding: 15px 20px;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 10px rgba(255, 107, 138, 0.08);
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.story:hover {
+    transform: scale(1.05);
+}
+
+.story-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b8a, #ff8fab);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(255, 107, 138, 0.3);
+    transition: all 0.3s ease;
+}
+
+.story-circle:hover {
+    box-shadow: 0 4px 25px rgba(255, 107, 138, 0.5);
+    transform: scale(1.05);
+}
+
+.story-name {
+    font-size: 12px;
     color: #5c2e4a;
+    font-weight: 500;
 }
 
-.categoria::before {
-    content: "🌸";
-    font-size: 30px;
+/* ===== POSTS (CARDS) ESTILO REDE SOCIAL ===== */
+.post {
+    max-width: 700px;
+    margin: 25px auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 30px rgba(255, 107, 138, 0.12);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 107, 138, 0.2);
+}
+
+.post-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 182, 193, 0.2);
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b8a, #ff8fab);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 2px solid white;
+    box-shadow: 0 2px 10px rgba(255, 107, 138, 0.2);
+}
+
+.username {
+    font-weight: 600;
+    color: #2d1b2e;
+    font-size: 15px;
+}
+
+.post-time {
+    color: #a0708a;
+    font-size: 13px;
+}
+
+.post-options {
+    font-size: 20px;
+    color: #a0708a;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.post-options:hover {
+    background: rgba(255, 107, 138, 0.1);
+}
+
+.post-content {
+    padding: 0;
+}
+
+.post-content iframe {
     display: block;
-    text-align: center;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 450px;
+    border: none;
+    margin: 0;
 }
 
-.categoria::after {
-    content: "✨";
-    font-size: 25px;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+.post-actions {
+    padding: 12px 20px;
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 182, 193, 0.2);
+    background: rgba(255, 255, 255, 0.3);
 }
 
-.categoria h2 {
-    font-size: 38px;
+.action {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5c2e4a;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-/* Coração no final do título */
-h1::after {
-    content: " 💖";
+.action:hover {
+    background: rgba(255, 107, 138, 0.1);
+    color: #ff6b8a;
 }
 
-/* Emojis fofos nos subtítulos */
-.categoria h2::before {
-    content: "💗 ";
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .stories {
+        gap: 12px;
+        padding: 10px 15px;
+    }
+
+    .story-circle {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .post {
+        margin: 15px 10px;
+        border-radius: 15px;
+    }
+
+    .post-content iframe {
+        height: 250px;
+    }
+
+    .post-actions {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .action {
+        font-size: 13px;
+    }
+
+    .search-bar {
+        margin: 15px 10px;
+        padding: 10px 15px;
+    }
 }
 
-.categoria h2::after {
-    content: " 💗";
-}
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
 
-h1 {
-    display: block;
-    width: fit-content;
-    margin: 0 auto 20px auto;
+    .logo-icon {
+        font-size: 26px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .story-circle {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .story-name {
+        font-size: 10px;
+    }
+
+    .post-content iframe {
+        height: 200px;
+    }
+
+    .post-actions {
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .action {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
 }
